@@ -1,0 +1,14 @@
+ASP.NET 5 Modern Web
+beta 4
+bring desk to web - all and kitchen sink.
+now module.
+better for the cloud. scale-up, scale-down.
+faster build. 
+cross-platform. 
+choose your editor and tools. command-line. Visual Studio Code.
+no more black box.
+fast as possibly can be. 90% less memory. comparable or better than node.js
+http://docs.asp.net
+View refererences
+empty -> error page
+totally modular
