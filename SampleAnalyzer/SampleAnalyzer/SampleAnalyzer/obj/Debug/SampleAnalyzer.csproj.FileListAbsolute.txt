@@ -1,0 +1,9 @@
+C:\_git\JuneMeetupDemos\SampleAnalyzer\SampleAnalyzer\SampleAnalyzer\bin\Debug\Diagnostic.nuspec
+C:\_git\JuneMeetupDemos\SampleAnalyzer\SampleAnalyzer\SampleAnalyzer\bin\Debug\tools\install.ps1
+C:\_git\JuneMeetupDemos\SampleAnalyzer\SampleAnalyzer\SampleAnalyzer\bin\Debug\tools\uninstall.ps1
+C:\_git\JuneMeetupDemos\SampleAnalyzer\SampleAnalyzer\SampleAnalyzer\bin\Debug\SampleAnalyzer.dll
+C:\_git\JuneMeetupDemos\SampleAnalyzer\SampleAnalyzer\SampleAnalyzer\bin\Debug\SampleAnalyzer.pdb
+C:\_git\JuneMeetupDemos\SampleAnalyzer\SampleAnalyzer\SampleAnalyzer\obj\Debug\SampleAnalyzer.Resources.resources
+C:\_git\JuneMeetupDemos\SampleAnalyzer\SampleAnalyzer\SampleAnalyzer\obj\Debug\SampleAnalyzer.csproj.GenerateResource.Cache
+C:\_git\JuneMeetupDemos\SampleAnalyzer\SampleAnalyzer\SampleAnalyzer\obj\Debug\SampleAnalyzer.dll
+C:\_git\JuneMeetupDemos\SampleAnalyzer\SampleAnalyzer\SampleAnalyzer\obj\Debug\SampleAnalyzer.pdb
