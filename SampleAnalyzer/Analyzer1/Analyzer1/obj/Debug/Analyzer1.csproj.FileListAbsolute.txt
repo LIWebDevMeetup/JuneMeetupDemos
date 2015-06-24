@@ -1,0 +1,10 @@
+C:\_git\JuneMeetupDemos\SampleAnalyzer\Analyzer1\Analyzer1\bin\Debug\Diagnostic.nuspec
+C:\_git\JuneMeetupDemos\SampleAnalyzer\Analyzer1\Analyzer1\bin\Debug\tools\install.ps1
+C:\_git\JuneMeetupDemos\SampleAnalyzer\Analyzer1\Analyzer1\bin\Debug\tools\uninstall.ps1
+C:\_git\JuneMeetupDemos\SampleAnalyzer\Analyzer1\Analyzer1\bin\Debug\Analyzer1.dll
+C:\_git\JuneMeetupDemos\SampleAnalyzer\Analyzer1\Analyzer1\bin\Debug\Analyzer1.pdb
+C:\_git\JuneMeetupDemos\SampleAnalyzer\Analyzer1\Analyzer1\obj\Debug\Analyzer1.csprojResolveAssemblyReference.cache
+C:\_git\JuneMeetupDemos\SampleAnalyzer\Analyzer1\Analyzer1\obj\Debug\Analyzer1.Resources.resources
+C:\_git\JuneMeetupDemos\SampleAnalyzer\Analyzer1\Analyzer1\obj\Debug\Analyzer1.csproj.GenerateResource.Cache
+C:\_git\JuneMeetupDemos\SampleAnalyzer\Analyzer1\Analyzer1\obj\Debug\Analyzer1.dll
+C:\_git\JuneMeetupDemos\SampleAnalyzer\Analyzer1\Analyzer1\obj\Debug\Analyzer1.pdb

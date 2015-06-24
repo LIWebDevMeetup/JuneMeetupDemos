@@ -1,6 +1,6 @@
 C:\_git\JuneMeetupDemos\AnalyzerDemo\AnalyzerDemo\bin\Debug\AnalyzerDemo.exe.config
 C:\_git\JuneMeetupDemos\AnalyzerDemo\AnalyzerDemo\bin\Debug\AnalyzerDemo.exe
 C:\_git\JuneMeetupDemos\AnalyzerDemo\AnalyzerDemo\bin\Debug\AnalyzerDemo.pdb
-C:\_git\JuneMeetupDemos\AnalyzerDemo\AnalyzerDemo\obj\Debug\AnalyzerDemo.csprojResolveAssemblyReference.cache
 C:\_git\JuneMeetupDemos\AnalyzerDemo\AnalyzerDemo\obj\Debug\AnalyzerDemo.exe
 C:\_git\JuneMeetupDemos\AnalyzerDemo\AnalyzerDemo\obj\Debug\AnalyzerDemo.pdb
+C:\_git\JuneMeetupDemos\AnalyzerDemo\AnalyzerDemo\obj\Debug\AnalyzerDemo.csprojResolveAssemblyReference.cache

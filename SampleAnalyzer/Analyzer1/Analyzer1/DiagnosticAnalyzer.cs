@@ -8,44 +8,42 @@ using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 
-namespace SampleAnalyzer
+namespace Analyzer1
 {
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-    public class SampleAnalyzerAnalyzer : DiagnosticAnalyzer
+    public class Analyzer1Analyzer : DiagnosticAnalyzer
     {
-        public const string DiagnosticId = "SampleAnalyzer";
+        public const string DiagnosticId = "Analyzer1";
 
         // You can change these strings in the Resources.resx file. If you do not want your analyzer to be localize-able, you can use regular strings for Title and MessageFormat.
         internal static readonly LocalizableString Title = new LocalizableResourceString(nameof(Resources.AnalyzerTitle), Resources.ResourceManager, typeof(Resources));
         internal static readonly LocalizableString MessageFormat = new LocalizableResourceString(nameof(Resources.AnalyzerMessageFormat), Resources.ResourceManager, typeof(Resources));
         internal static readonly LocalizableString Description = new LocalizableResourceString(nameof(Resources.AnalyzerDescription), Resources.ResourceManager, typeof(Resources));
-        internal const string Category = "LI Web Dev Meetup";
+        internal const string Category = "Naming";
 
-        internal static DiagnosticDescriptor Rule = new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category, DiagnosticSeverity.Error, isEnabledByDefault: true, description: Description);
+        internal static DiagnosticDescriptor Rule = new DiagnosticDescriptor(DiagnosticId, Title, MessageFormat, Category, DiagnosticSeverity.Warning, isEnabledByDefault: true, description: Description);
 
         public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics { get { return ImmutableArray.Create(Rule); } }
 
         public override void Initialize(AnalysisContext context)
         {
             // TODO: Consider registering other actions that act on syntax instead of or in addition to symbols
-            //context.RegisterSymbolAction(AnalyzeSymbol, SymbolKind.NamedType);
-
-            context.RegisterSyntaxNodeAction(r => AnalyzeObjectCreation(r), SyntaxKind.ObjectCreationExpression);
+            context.RegisterSymbolAction(AnalyzeSymbol, SymbolKind.NamedType);
         }
 
-        private void AnalyzeObjectCreation(SyntaxNodeAnalysisContext ctx)
+        private static void AnalyzeSymbol(SymbolAnalysisContext context)
         {
-            var oce = (ObjectCreationExpressionSyntax)ctx.Node;
-            var target = ctx.SemanticModel.Compilation.GetTypeByMetadataName("AnalyzerDemo.MyRepo");
-            var cn_target = ctx.SemanticModel.Compilation.GetTypeByMetadataName("System.Data.OleDb.OleDbConnection");
+            // TODO: Replace the following code with your own analysis, generating Diagnostic objects for any issues you find
+            var namedTypeSymbol = (INamedTypeSymbol)context.Symbol;
 
-            var repoType = ctx.SemanticModel.GetSymbolInfo(oce.Type).Symbol as INamedTypeSymbol;
-
-            var count = oce.ArgumentList.Arguments.Count;
-            
-            if (repoType.ConstructedFrom.Equals(target) && count > 0)
+            // Find just those named type symbols with names containing lowercase letters.
+            var chars = namedTypeSymbol.Name.ToCharArray();
+            if (char.IsLower(chars[0]))
             {
-                ctx.ReportDiagnostic(Diagnostic.Create(Rule, oce.Type.GetLocation()));
+                // For all such symbols, produce a diagnostic.
+                var diagnostic = Diagnostic.Create(Rule, namedTypeSymbol.Locations[0], namedTypeSymbol.Name);
+
+                context.ReportDiagnostic(diagnostic);
             }
         }
     }

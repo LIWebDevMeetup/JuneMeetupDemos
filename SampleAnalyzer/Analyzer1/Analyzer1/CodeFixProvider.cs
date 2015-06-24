@@ -13,14 +13,14 @@ using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Rename;
 using Microsoft.CodeAnalysis.Text;
 
-namespace SampleAnalyzer
+namespace Analyzer1
 {
-    [ExportCodeFixProvider(LanguageNames.CSharp, Name = nameof(SampleAnalyzerCodeFixProvider)), Shared]
-    public class SampleAnalyzerCodeFixProvider : CodeFixProvider
+    [ExportCodeFixProvider(LanguageNames.CSharp, Name = nameof(Analyzer1CodeFixProvider)), Shared]
+    public class Analyzer1CodeFixProvider : CodeFixProvider
     {
         public sealed override ImmutableArray<string> FixableDiagnosticIds
         {
-            get { return ImmutableArray.Create(SampleAnalyzerAnalyzer.DiagnosticId); }
+            get { return ImmutableArray.Create(Analyzer1Analyzer.DiagnosticId); }
         }
 
         public sealed override FixAllProvider GetFixAllProvider()
@@ -49,7 +49,7 @@ namespace SampleAnalyzer
         {
             // Compute new uppercase name.
             var identifierToken = typeDecl.Identifier;
-            var newName = identifierToken.Text.ToUpperInvariant();
+            var newName = identifierToken.Text.Substring(0,1).ToUpperInvariant() + identifierToken.Text.Substring(1);
 
             // Get the symbol representing the type to be renamed.
             var semanticModel = await document.GetSemanticModelAsync(cancellationToken);

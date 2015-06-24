@@ -7,3 +7,4 @@ C:\_git\JuneMeetupDemos\SampleAnalyzer\SampleAnalyzer\SampleAnalyzer\obj\Debug\S
 C:\_git\JuneMeetupDemos\SampleAnalyzer\SampleAnalyzer\SampleAnalyzer\obj\Debug\SampleAnalyzer.csproj.GenerateResource.Cache
 C:\_git\JuneMeetupDemos\SampleAnalyzer\SampleAnalyzer\SampleAnalyzer\obj\Debug\SampleAnalyzer.dll
 C:\_git\JuneMeetupDemos\SampleAnalyzer\SampleAnalyzer\SampleAnalyzer\obj\Debug\SampleAnalyzer.pdb
+C:\_git\JuneMeetupDemos\SampleAnalyzer\SampleAnalyzer\SampleAnalyzer\obj\Debug\SampleAnalyzer.csprojResolveAssemblyReference.cache
