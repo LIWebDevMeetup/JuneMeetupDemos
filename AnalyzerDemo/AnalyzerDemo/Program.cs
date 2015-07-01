@@ -1,10 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data.OleDb;
 using System.Linq;
 using System.Text;
+using System.Data.OleDb;
+using System.Configuration;
 using System.Threading.Tasks;
+using System.Collections.Generic;
 
 namespace AnalyzerDemo
 {
@@ -13,7 +13,7 @@ namespace AnalyzerDemo
         static void Main(string[] args)
         {
             var cn = new OleDbConnection();
-            var repo = new MyRepo(cn);
+            var repo = new MyRepo();
         }
     }
 
@@ -37,7 +37,7 @@ namespace AnalyzerDemo
             cn.Open();
         }
 
-        // lets deprecate this.
+        // TODO: lets deprecate this.
         public MyRepo(OleDbConnection conn)
         {
             cn = conn;

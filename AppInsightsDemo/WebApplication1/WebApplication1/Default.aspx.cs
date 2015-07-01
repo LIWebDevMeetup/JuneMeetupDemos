@@ -49,6 +49,7 @@ namespace WebApplication1
             //Although AppInsights will track your errors automatically, here I can associate this error with a particular correlation ID, giving me access to this id within App Insights.
             var propertiesDictionary = new Dictionary<string, string>();
             telemetry.Properties.Add("correlation-id", "3ggbbg45-b812-1234-1ce1-a51cb3241b4g");
+            telemetry.
             telemetry.TrackException(new DivideByZeroException());
         }
     }
